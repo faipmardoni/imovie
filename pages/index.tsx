@@ -3,7 +3,8 @@ import React from 'react';
 import Head from 'next/head';
 
 import Navigation from 'components/Navigation/index';
-import SearchInput from 'components/SearchInput';
+import MovieList from 'widgets/MovieList';
+import SearchInput from 'widgets/SearchInput';
 
 const Home: React.FC = () => (
   <>
@@ -12,6 +13,7 @@ const Home: React.FC = () => (
     </Head>
     <Navigation />
     <SearchInput />
+    <MovieList />
   </>
 );
 
