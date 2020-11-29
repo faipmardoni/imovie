@@ -1,15 +1,24 @@
 import React from 'react';
+import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
-import store from 'store';
+import { useStore } from 'store';
 
 import 'sanitize.css';
 import 'styles/app.scss';
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => (
-  <Provider store={store}>
-    <Component {...pageProps} />
-  </Provider>
-);
+interface Props extends AppProps {
+  pageProps: any;
+}
+
+const App: NextPage<Props> = ({ Component, pageProps }) => {
+  const store = useStore(pageProps.initialReduxState);
+
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
+};
 
 export default App;

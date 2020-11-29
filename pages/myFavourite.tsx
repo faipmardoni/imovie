@@ -1,8 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+import Container from 'react-bootstrap/Container';
 
 import Navigation from 'components/Navigation/index';
-import Container from 'react-bootstrap/Container';
+import MovieList from 'widgets/MovieList';
 
 const myFavourite = () => (
   <div>
@@ -11,7 +12,7 @@ const myFavourite = () => (
     </Head>
     <Navigation defaultActiveKey="/myFavourite" />
     <Container className="mt-5">
-      myFavourite
+      <MovieList dataFrom="favourite" />
     </Container>
   </div>
 );

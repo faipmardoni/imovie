@@ -2,6 +2,8 @@ import { combineReducers } from 'redux';
 
 import detail from './detail';
 import favourite from './favourite';
-import movies from './movies';
+import search from './search';
 
-export default () => combineReducers({ detail, favourite, movies });
+const reducer = () => combineReducers({ detail, favourite, search });
+
+export default reducer;

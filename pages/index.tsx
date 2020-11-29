@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import Navigation from 'components/Navigation/index';
 import MovieList from 'widgets/MovieList';
-import SearchInput from 'widgets/SearchInput';
+import SearchMovie from 'widgets/SearchMovie';
 
 const Home: React.FC = () => (
   <>
@@ -12,8 +12,8 @@ const Home: React.FC = () => (
       <title>Search Movie</title>
     </Head>
     <Navigation />
-    <SearchInput />
-    <MovieList />
+    <SearchMovie />
+    <MovieList dataFrom="search" />
   </>
 );
 
