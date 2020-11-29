@@ -4,7 +4,9 @@ This is a simple web application to allow user search movies [Next.js](https://n
 
 ## Getting Started
 
-First, run the development server:
+First create environtment OMDB_APIKEY with value from [`here`](http://www.omdbapi.com/apikey.aspx)
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -14,7 +16,24 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Run In Production
+
+First create environtment OMDB_APIKEY with value from [`here`](http://www.omdbapi.com/apikey.aspx)
+
+Then build application:
+```bash
+npm run build
+# or
+yarn build
+```
+
+Then run application:
+```bash
+npm run build
+# or
+yarn build
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Learn More
 
